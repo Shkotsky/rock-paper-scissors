@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 200vh;
+  position: absolute;
+  background: #1f3756;
+  background: radial-gradient(circle, #1f3756 20%, #141539 90%);
+  top: -100%;
+}
+/*# sourceMappingURL=main.css.map */

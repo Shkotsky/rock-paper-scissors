@@ -4,10 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock-Paper Scissors</title>
+    <title>Rock Paper Scissors Lizard Spoke</title>
     <link rel="stylesheet" href="/dist/css/main.css" />
   </head>
   <body>
-    <main></main>
+    <main>
+      <div class="container">
+        <div class="score-table">
+          <img src="/dist/images/logo-bonus.svg" alt="logo" />
+          <div class="score-table__points">
+            <span class="score-table__points__label">SCORE</span
+            ><span class="score-table__points__score">12</span>
+          </div>
+        </div>
+        <div class="choose-hand">
+          <img class="pentagon" src="/dist/images/bg-pentagon.svg" alt="logo" />
+          <div class="circle-wrapper">
+            <div class="row">
+              <div class="circle scissors"></div>
+            </div>
+            <div class="row">
+              <div class="circle spoke"></div>
+              <div class="circle lizard"></div>
+            </div>
+            <div class="row">
+              <div class="circle paper"></div>
+              <div class="circle rock"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

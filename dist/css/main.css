@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
 *,
 *::before,
 *::after {
@@ -9,17 +10,153 @@
   margin: 0;
 }
 
+html {
+  font-size: 10px;
+}
+
 html,
 body {
   height: 100%;
+  color: #fff;
+  font-size: 1.6rem;
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 
 main {
   width: 100%;
-  height: 200vh;
-  position: absolute;
+  height: 100vh;
   background: #1f3756;
-  background: radial-gradient(circle, #1f3756 20%, #141539 90%);
-  top: -100%;
+  background: radial-gradient(circle at 50% -50%, #1f3756 45%, #141539 90%);
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 3rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+}
+
+.score-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+  height: auto;
+  border: 3px solid #606e85;
+  border-radius: 15px;
+  padding: 0.8rem;
+}
+
+.score-table__points {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  background: white;
+  padding: 0.2rem 1.5rem;
+  border-radius: 10px;
+}
+
+.score-table__points__label {
+  color: #2a46c0;
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+}
+
+.score-table__points__score {
+  color: #606e85;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.choose-hand {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+}
+
+.pentagon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.circle {
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.circle-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  gap: 1rem;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row:nth-child(2) {
+  gap: 8rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.row:nth-child(3) {
+  gap: 4rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.scissors {
+  left: calc(50% - 50px);
 }
 /*# sourceMappingURL=main.css.map */

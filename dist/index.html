@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock Paper Scissors Lizard Spoke</title>
+    <title>Rock Paper Scissors Lizard Spock</title>
     <link rel="stylesheet" href="/dist/css/main.css" />
   </head>
   <body>
@@ -21,30 +21,69 @@
           <img class="pentagon" src="/dist/images/bg-pentagon.svg" alt="logo" />
           <div class="circle-wrapper">
             <div class="row">
-              <div class="circle scissors">
+              <div
+                class="circle scissors"
+                onclick="picking(event)"
+                data-hand-type="scissors"
+              >
                 <img src="/dist/images/icon-scissors.svg" alt="scissors" />
               </div>
             </div>
             <div class="row">
-              <div class="circle spoke">
+              <div
+                class="circle spock"
+                onclick="picking(event)"
+                data-hand-type="spock"
+              >
                 <img src="/dist/images/icon-spock.svg" alt="spock" />
               </div>
-              <div class="circle paper">
+              <div
+                class="circle paper"
+                onclick="picking(event)"
+                data-hand-type="paper"
+              >
                 <img src="/dist/images/icon-paper.svg" alt="paper" />
               </div>
             </div>
             <div class="row">
-              <div class="circle lizard">
+              <div
+                class="circle lizard"
+                onclick="picking(event)"
+                data-hand-type="lizard"
+              >
                 <img src="/dist/images/icon-lizard.svg" alt="lizard" />
               </div>
 
-              <div class="circle rock">
+              <div
+                class="circle rock"
+                onclick="picking(event)"
+                data-hand-type="rock"
+              >
                 <img src="/dist/images/icon-rock.svg" alt="rock" />
               </div>
             </div>
           </div>
         </div>
+        <div class="contest hidden">
+          <div class="pick-container">
+            <h4>YOU PICKED</h4>
+            <div class="circle scaled-circle" id="my-pick">
+              <img src="" alt="" id="my-pick-image" />
+            </div>
+          </div>
+          <div class="pick-container">
+            <h2>YOU LOSE</h2>
+            <button>PLAY AGAIN</button>
+          </div>
+          <div class="pick-container">
+            <h4>HOUSE PICKED</h4>
+            <div class="circle scaled-circle" id="house-pick">
+              <img src="" alt="" id="house-pick-image" />
+            </div>
+          </div>
+        </div>
       </div>
     </main>
+    <script src="/dist/scripts/main.js"></script>
   </body>
 </html>

@@ -12,8 +12,8 @@ $rock-gradient-to: hsl(349, 70%, 56%);
 $lizard-gradient-from: hsl(261, 73%, 60%);
 $lizard-gradient-to: hsl(261, 72%, 63%);
 
-$spoke-gradient-from: hsl(189, 59%, 53%);
-$spoke-gradient-to: hsl(189, 58%, 57%);
+$spock-gradient-from: hsl(189, 59%, 53%);
+$spock-gradient-to: hsl(189, 58%, 57%);
 
 $dark-text: hsl(229, 25%, 31%);
 $score-text: hsl(229, 64%, 46%);
@@ -113,6 +113,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
 }
 .circle-wrapper {
   display: flex;
@@ -143,10 +146,10 @@ main {
   border: 0.5rem solid $scissors-gradient-to;
 }
 
-.spoke {
+.spock {
   box-shadow: #dcdcdc 0px 6px 0px 0px inset,
-    $spoke-gradient-from 0px 6px 0px 0px;
-  border: 0.5rem solid $spoke-gradient-to;
+    $spock-gradient-from 0px 6px 0px 0px;
+  border: 0.5rem solid $spock-gradient-to;
 }
 
 .rock {
@@ -164,4 +167,27 @@ main {
   box-shadow: #dcdcdc 0px 6px 0px 0px inset,
     $lizard-gradient-from 0px 6px 0px 0px;
   border: 0.5rem solid $lizard-gradient-to;
+}
+
+.hidden {
+  display: none;
+}
+.visible {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contest {
+  width: 80%;
+}
+.scaled-circle {
+  transform: scale(1.8);
+  margin-top: 5rem;
+}
+
+.pick-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

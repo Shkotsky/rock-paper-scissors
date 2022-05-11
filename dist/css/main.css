@@ -123,6 +123,10 @@ main {
           align-items: center;
 }
 
+.circle:hover {
+  cursor: pointer;
+}
+
 .circle-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -165,7 +169,7 @@ main {
   border: 0.5rem solid #eca922;
 }
 
-.spoke {
+.spock {
   -webkit-box-shadow: #dcdcdc 0px 6px 0px 0px inset, #40b9ce 0px 6px 0px 0px;
           box-shadow: #dcdcdc 0px 6px 0px 0px inset, #40b9ce 0px 6px 0px 0px;
   border: 0.5rem solid #52bed1;
@@ -187,5 +191,44 @@ main {
   -webkit-box-shadow: #dcdcdc 0px 6px 0px 0px inset, #834fe3 0px 6px 0px 0px;
           box-shadow: #dcdcdc 0px 6px 0px 0px inset, #834fe3 0px 6px 0px 0px;
   border: 0.5rem solid #8c5de5;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contest {
+  width: 80%;
+}
+
+.scaled-circle {
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+  margin-top: 5rem;
+}
+
+.pick-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */

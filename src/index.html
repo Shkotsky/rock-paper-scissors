@@ -5,20 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors Lizard Spock</title>
-    <link rel="stylesheet" href="/dist/css/main.css" />
+    <link rel="stylesheet" href="/src/css/main.css" />
   </head>
   <body>
     <main>
       <div class="container">
         <div class="score-table">
-          <img src="/dist/images/logo-bonus.svg" alt="logo" />
+          <img src="/src/images/logo-bonus.svg" alt="logo" />
           <div class="score-table__points">
             <span class="score-table__points__label">SCORE</span
             ><span class="score-table__points__score">12</span>
           </div>
         </div>
         <div class="choose-hand">
-          <img class="pentagon" src="/dist/images/bg-pentagon.svg" alt="logo" />
+          <img class="pentagon" src="/src/images/bg-pentagon.svg" alt="logo" />
           <div class="circle-wrapper">
             <div class="row">
               <div
@@ -26,7 +26,7 @@
                 onclick="picking(event)"
                 data-hand-type="scissors"
               >
-                <img src="/dist/images/icon-scissors.svg" alt="scissors" />
+                <img src="/src/images/icon-scissors.svg" alt="scissors" />
               </div>
             </div>
             <div class="row">
@@ -35,14 +35,14 @@
                 onclick="picking(event)"
                 data-hand-type="spock"
               >
-                <img src="/dist/images/icon-spock.svg" alt="spock" />
+                <img src="/src/images/icon-spock.svg" alt="spock" />
               </div>
               <div
                 class="circle paper"
                 onclick="picking(event)"
                 data-hand-type="paper"
               >
-                <img src="/dist/images/icon-paper.svg" alt="paper" />
+                <img src="/src/images/icon-paper.svg" alt="paper" />
               </div>
             </div>
             <div class="row">
@@ -51,7 +51,7 @@
                 onclick="picking(event)"
                 data-hand-type="lizard"
               >
-                <img src="/dist/images/icon-lizard.svg" alt="lizard" />
+                <img src="/src/images/icon-lizard.svg" alt="lizard" />
               </div>
 
               <div
@@ -59,7 +59,7 @@
                 onclick="picking(event)"
                 data-hand-type="rock"
               >
-                <img src="/dist/images/icon-rock.svg" alt="rock" />
+                <img src="/src/images/icon-rock.svg" alt="rock" />
               </div>
             </div>
           </div>
@@ -84,6 +84,6 @@
         </div>
       </div>
     </main>
-    <script src="/dist/scripts/main.js"></script>
+    <script src="/src/scripts/main.js"></script>
   </body>
 </html>

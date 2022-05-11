@@ -19,11 +19,11 @@ const picking = (el) => {
     let attribute = el.currentTarget.getAttribute("data-hand-type");
 
     myPick.classList.add(attribute);
-    myPickImage.src = `/dist/images/icon-${attribute}.svg`;
+    myPickImage.src = `/src/images/icon-${attribute}.svg`;
     myPickImage.alt = `${attribute}`
 
     housePick.classList.add(botPick);
-    housePickImage.src = `/dist/images/icon-${botPick}.svg`;
+    housePickImage.src = `/src/images/icon-${botPick}.svg`;
     housePickImage.alt = `${botPick}`
     contest.classList.remove('hidden');
     contest.classList.add('visible');

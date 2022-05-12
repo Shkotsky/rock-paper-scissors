@@ -14,7 +14,7 @@
           <img src="/src/images/logo-bonus.svg" alt="logo" />
           <div class="score-table__points">
             <span class="score-table__points__label">SCORE</span
-            ><span class="score-table__points__score">12</span>
+            ><span class="score-table__points__score" id="score"></span>
           </div>
         </div>
         <div class="choose-hand">
@@ -23,7 +23,7 @@
             <div class="row">
               <div
                 class="circle scissors"
-                onclick="picking(event)"
+                onclick="handlePick(event)"
                 data-hand-type="scissors"
               >
                 <img src="/src/images/icon-scissors.svg" alt="scissors" />
@@ -32,14 +32,14 @@
             <div class="row">
               <div
                 class="circle spock"
-                onclick="picking(event)"
+                onclick="handlePick(event)"
                 data-hand-type="spock"
               >
                 <img src="/src/images/icon-spock.svg" alt="spock" />
               </div>
               <div
                 class="circle paper"
-                onclick="picking(event)"
+                onclick="handlePick(event)"
                 data-hand-type="paper"
               >
                 <img src="/src/images/icon-paper.svg" alt="paper" />
@@ -48,7 +48,7 @@
             <div class="row">
               <div
                 class="circle lizard"
-                onclick="picking(event)"
+                onclick="handlePick(event)"
                 data-hand-type="lizard"
               >
                 <img src="/src/images/icon-lizard.svg" alt="lizard" />
@@ -56,7 +56,7 @@
 
               <div
                 class="circle rock"
-                onclick="picking(event)"
+                onclick="handlePick(event)"
                 data-hand-type="rock"
               >
                 <img src="/src/images/icon-rock.svg" alt="rock" />
@@ -72,8 +72,8 @@
             </div>
           </div>
           <div class="pick-container">
-            <h2>YOU LOSE</h2>
-            <button>PLAY AGAIN</button>
+            <h2 id="text-result"></h2>
+            <div class="play-again" onclick="location.reload()">PLAY AGAIN</div>
           </div>
           <div class="pick-container">
             <h4>HOUSE PICKED</h4>

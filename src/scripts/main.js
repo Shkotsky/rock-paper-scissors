@@ -30,7 +30,7 @@ const setLocalStorage = () => {
     } else {
         localStorage.setItem('myPoints', points);
     }
-    score.innerHTML = points;
+    score.innerText = points;
 }
 
 setLocalStorage();
@@ -72,23 +72,53 @@ const handleStyle = (attribute, houseRandom) => {
 
 const validateContest = (validate, isDraw) => {
     if (validate) {
-        textResult.innerHTML = win;
+        textResult.innerText = win;
         points++;
         calcPoints();
+        myPick.classList.add('winner');
     } else if (isDraw) {
-        textResult.innerHTML = draw;
+        textResult.innerText = draw;
     } else {
-        textResult.innerHTML = lose;
+        textResult.innerText = lose;
         points--;
         calcPoints();
+        housePick.classList.add('winner');
     }
 }
 
 const calcPoints = () => {
     localStorage.setItem('myPoints', points);
     points = parseInt(localStorage.getItem("myPoints"));
-    score.innerHTML = points;
+    score.innerText = points;
 }
 
 
+const modal = document.querySelector("#myModal");
 
+const rules = document.querySelector("#rules");
+
+const close = document.querySelectorAll(".close")[0];
+
+rules.onclick = function () {
+    modal.style.display = "block";
+}
+
+close.onclick = function () {
+    modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+const handleReset = () => {
+    const text = "Are you sure you want to reset the score ?";
+    if (confirm(text) == true) {
+
+        localStorage.clear();
+        points = 0;
+        score.innerText = points;
+    }
+}

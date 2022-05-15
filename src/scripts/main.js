@@ -7,6 +7,7 @@ const myPick = document.querySelector('#my-pick');
 const myPickImage = document.querySelector('#my-pick-image');
 const housePick = document.querySelector('#house-pick');
 const housePickImage = document.querySelector('#house-pick-image');
+const playAgain = document.querySelector('#play-again');
 
 const win = "YOU WIN";;
 const lose = "YOU LOSE";
@@ -57,13 +58,20 @@ const handleImages = (attribute, houseRandom) => {
     myPickImage.src = `/src/images/icon-${attribute}.svg`;
     myPickImage.alt = `${attribute}`
 
-    housePickImage.src = `/src/images/icon-${houseRandom}.svg`;
-    housePickImage.alt = `${houseRandom}`
+    setTimeout(() => {
+        housePickImage.src = `/src/images/icon-${houseRandom}.svg`;
+        housePickImage.alt = `${houseRandom}`
+    }, 1500);
+
 }
 
 const handleStyle = (attribute, houseRandom) => {
     myPick.classList.add(attribute);
-    housePick.classList.add(houseRandom);
+    setTimeout(() => {
+        housePick.classList.add(houseRandom);
+        housePick.classList.remove('dark-circle');
+    }, 1500);
+
     contest.classList.remove('hidden');
     contest.classList.add('visible');
     pentagon.classList.add('hidden');
@@ -71,18 +79,28 @@ const handleStyle = (attribute, houseRandom) => {
 }
 
 const validateContest = (validate, isDraw) => {
+
+    setTimeout(() => {
+        playAgain.classList.remove('pick-container--none');
+    }, 2500);
+
     if (validate) {
         textResult.innerText = win;
         points++;
         calcPoints();
-        myPick.classList.add('winner');
+        setTimeout(() => {
+            myPick.classList.add('winner');
+        }, 2500);
     } else if (isDraw) {
         textResult.innerText = draw;
     } else {
         textResult.innerText = lose;
         points--;
         calcPoints();
-        housePick.classList.add('winner');
+        setTimeout(() => {
+            housePick.classList.add('winner');
+        }, 2500);
+
     }
 }
 

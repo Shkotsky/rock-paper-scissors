@@ -47,11 +47,13 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 50%;
+  max-width: 90%;
+  width: 35rem;
   height: auto;
   border: 3px solid $header-outline;
   border-radius: 15px;
   padding: 0.8rem;
+  align-items: stretch;
 
   &__points {
     display: flex;
@@ -69,16 +71,20 @@ main {
     }
     &__score {
       color: $header-outline;
-      font-size: 2.5rem;
+      font-size: 2.1rem;
       font-weight: 700;
     }
+  }
+
+  img {
+    max-height: 4rem;
   }
 }
 
 .choose-hand {
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 100%;
 }
 
 .pentagon {
@@ -90,8 +96,8 @@ main {
 
 .circle {
   background-color: #fff;
-  width: 130px;
-  height: 130px;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -100,11 +106,22 @@ main {
     cursor: pointer;
   }
 }
+
+.dark-circle {
+  background-color: #161c3f;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .circle-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   height: 100%;
   position: absolute;
   top: 50%;
@@ -115,7 +132,7 @@ main {
 .row {
   display: flex;
   &:nth-child(2) {
-    gap: 8rem;
+    gap: 7rem;
     margin: 0.3rem 0 2rem 0;
   }
   &:nth-child(3) {
@@ -157,13 +174,15 @@ main {
 }
 .visible {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: end;
 }
 
 .contest {
-  width: 80%;
+  width: 30rem;
+  max-width: 80%;
   height: 50vh;
+  text-align: center;
 }
 .scaled-circle {
   transform: scale(1.8);
@@ -179,6 +198,9 @@ main {
   }
   &--margin {
     margin: 1rem 0 1rem 2rem;
+  }
+  &--none {
+    display: none;
   }
 }
 
@@ -255,4 +277,30 @@ main {
 
 .close:hover {
   cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  html {
+    font-size: 1.3rem;
+  }
+  .pentagon {
+    width: 270px;
+  }
+
+  .scaled-circle {
+    transform: scale(1);
+  }
+  .pick-container--margin {
+    margin: 0;
+  }
+  #text-result {
+    font-size: 1.5rem;
+  }
+  .play-again {
+    padding: 0.1rem 1rem;
+  }
+  .visible {
+    justify-content: center;
+    gap: 1rem;
+  }
 }

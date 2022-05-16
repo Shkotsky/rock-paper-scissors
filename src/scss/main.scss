@@ -29,8 +29,12 @@ h6 {
 main {
   width: 100%;
   height: 100vh;
-  background: #1f3756;
-  background: radial-gradient(circle at 50% -50%, #1f3756 45%, #141539 90%);
+  background: $background-gradient-from;
+  background: radial-gradient(
+    circle at 50% -50%,
+    $background-gradient-from 45%,
+    $background-gradient-to 90%
+  );
 }
 
 .container {
@@ -87,7 +91,7 @@ main {
   height: 100%;
 }
 
-.pentagon {
+.pentagon-image {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -108,7 +112,7 @@ main {
 }
 
 .dark-circle {
-  background-color: #161c3f;
+  background-color: $background-gradient-to;
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
@@ -181,7 +185,7 @@ main {
 .contest {
   width: 30rem;
   max-width: 80%;
-  height: 50vh;
+  height: 100%;
   text-align: center;
 }
 .scaled-circle {
@@ -209,13 +213,14 @@ main {
   cursor: default;
 }
 
-.play-again {
+.play-again-btn {
   background-color: #fff;
   color: #161b3e;
   font-size: 0.7rem;
   padding: 0.4rem 2rem;
   border-radius: 10px;
   cursor: pointer;
+  letter-spacing: 3px;
 }
 
 .winner {
@@ -223,34 +228,34 @@ main {
     0 0 0 45px hsla(217, 16%, 45%, 0.08), 0 0 0 70px hsla(217, 16%, 45%, 0.1);
 }
 
-.btn-wrapper {
+footer {
   display: flex;
   justify-content: space-between;
   align-self: stretch;
   margin: 1.5rem;
+  div {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 0.3rem 1.2rem;
+    letter-spacing: 3px;
+    cursor: pointer;
+  }
 }
 
-.rules {
-  border: 2px solid #fff;
-  border-radius: 10px;
-  color: #fff;
-  font-size: 0.7rem;
-  padding: 0.3rem 1.2rem;
-  letter-spacing: 3px;
-  cursor: pointer;
-}
 
 .modal {
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+  padding-top: 6rem;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
   background-color: rgba(0, 0, 0, 0.4);
 
   &__content {
@@ -260,14 +265,12 @@ main {
     border: 1px solid #888;
     width: 16rem;
     border-radius: 10px;
-    &__header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-      h4 {
-        color: $dark-text;
-      }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    h4 {
+      color: $dark-text;
     }
     &__image {
       width: 100%;
@@ -280,27 +283,76 @@ main {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  h6 {
+    font-size: 0.6rem;
+  }
+
   html {
     font-size: 1.3rem;
   }
-  .pentagon {
+
+  .container {
+    gap: 0.5rem;
+    padding-top: 1rem;
+  }
+
+  .pentagon-image {
     width: 270px;
+  }
+
+  .contest {
+    max-width: 100%;
   }
 
   .scaled-circle {
     transform: scale(1);
+    margin-top: 1rem;
   }
-  .pick-container--margin {
-    margin: 0;
+
+  .pick-container {
+    flex-direction: column-reverse;
+
+    &:nth-child(1) {
+      width: 50%;
+      height: 9rem;
+      justify-content: space-between;
+    }
+    &:nth-child(3) {
+      width: 50%;
+      height: 9rem;
+      justify-content: space-between;
+    }
+
+    &--margin {
+      margin: 0;
+    }
   }
-  #text-result {
-    font-size: 1.5rem;
+
+  #play-again {
+    order: 1;
+    width: 100%;
+    flex-direction: column;
   }
-  .play-again {
-    padding: 0.1rem 1rem;
-  }
+
   .visible {
-    justify-content: center;
-    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  .modal {
+    padding-top: 0;
+    &__content {
+      height: 100%;
+      width: 100%;
+      border-radius: 0;
+      border: none;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+
+  .close {
+    order: 1;
   }
 }

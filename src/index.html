@@ -17,7 +17,11 @@
         </div>
       </div>
       <div class="choose-hand">
-        <img class="pentagon" src="/src/images/bg-pentagon.svg" alt="logo" />
+        <img
+          class="pentagon-image"
+          src="/src/images/bg-pentagon.svg"
+          alt="pentagon"
+        />
         <div class="circle-wrapper">
           <div class="row">
             <div
@@ -75,7 +79,9 @@
           class="pick-container pick-container--margin pick-container--none"
         >
           <h2 id="text-result"></h2>
-          <div class="play-again" onclick="location.reload()">PLAY AGAIN</div>
+          <div class="play-again-btn" onclick="location.reload()">
+            PLAY AGAIN
+          </div>
         </div>
         <div class="pick-container">
           <h6>THE HOUSE PICKED</h6>
@@ -84,20 +90,18 @@
           </div>
         </div>
       </div>
-      <div class="btn-wrapper">
-        <div class="rules" onclick="handleReset()">RESET</div>
-        <div class="rules" id="rules">RULES</div>
-      </div>
-      <div id="myModal" class="modal">
+      <footer>
+        <div onclick="handleReset()">RESET</div>
+        <div id="rules">RULES</div>
+      </footer>
+      <div id="rulesModal" class="modal">
         <div class="modal__content">
-          <div class="modal__content__header">
-            <h4>RULES</h4>
-            <img
-              class="close"
-              src="/src/images/icon-close.svg"
-              alt="close-icon"
-            />
-          </div>
+          <h4>RULES</h4>
+          <img
+            class="close"
+            src="/src/images/icon-close.svg"
+            alt="close-icon"
+          />
           <img
             class="modal__content__image"
             src="/src/images/image-rules-bonus.svg"

@@ -1,7 +1,7 @@
 
 const listOptions = ['scissors', 'spock', 'lizard', 'paper', 'rock'];
 const hands = document.querySelector('.choose-hand');
-const pentagon = document.querySelector('.pentagon');
+const pentagon = document.querySelector('.pentagon-image');
 const contest = document.querySelector('.contest')
 const myPick = document.querySelector('#my-pick');
 const myPickImage = document.querySelector('#my-pick-image');
@@ -39,11 +39,9 @@ setLocalStorage();
 const handlePick = (e) => {
 
     const houseRandom = listOptions[getRandomInt(listOptions.length)];
-
     const attribute = e.currentTarget.getAttribute("data-hand-type");
 
     handleImages(attribute, houseRandom)
-
     handleStyle(attribute, houseRandom);
 
     const validate = schemeRules[attribute].includes(houseRandom);
@@ -111,10 +109,8 @@ const calcPoints = () => {
 }
 
 
-const modal = document.querySelector("#myModal");
-
+const modal = document.querySelector("#rulesModal");
 const rules = document.querySelector("#rules");
-
 const close = document.querySelectorAll(".close")[0];
 
 rules.onclick = function () {

@@ -1,4 +1,44 @@
-# rock-paper-scissors
+# Rock, Paper, Scissors, Lizard and Spock Game with Vanilla JavaScript
 
+## Table of contents
 
-Live Demo https://kaleidoscopic-syrniki-07c52a.netlify.app/
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Description](#users-are-able-to)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
+
+## Overview
+
+### Screenshot
+
+![](./images/restScrShot.png)
+
+#### Users are able to:
+
+- View the optimal layout for the game depending on their device's screen size
+- Play Rock, Paper, Scissors, Lizard, Spock against the computer
+- Maintain the state of the score after refreshing the browser
+- Reset the score
+
+### Links
+
+- Solution URL: [FrontendMentor solution](https://www.frontendmentor.io/solutions/rock-paper-scissors-spock-lizard-game-with-vanilla-javascript-and-scss-By4SFygDc) 👈
+- Live Site URL: [Demo](https://kaleidoscopic-syrniki-07c52a.netlify.app/) 👈
+
+## My process
+
+### Built With
+
+- HTML5
+- Flexbox
+- SASS (SCSS)
+- JavaScript
+
+## Author
+
+- Frontend Mentor - [@Shkotsky](https://www.frontendmentor.io/profile/Shkotsky)
+- LinkedIn - [@Marko](https://www.linkedin.com/in/marko-hristovski-77b9a6149/)
+

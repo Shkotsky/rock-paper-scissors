@@ -14,7 +14,7 @@
 
 ### Screenshot
 
-![](./images/restScrShot.png)
+![](/screenShot/scrShotRock.png)
 
 #### Users are able to:
 

@@ -53,11 +53,11 @@ const handlePick = (e) => {
 const getRandomInt = (max) => Math.floor(Math.random() * max);
 
 const handleImages = (attribute, houseRandom) => {
-    myPickImage.src = `/src/images/icon-${attribute}.svg`;
+    myPickImage.src = `/images/icon-${attribute}.svg`;
     myPickImage.alt = `${attribute}`
 
     setTimeout(() => {
-        housePickImage.src = `/src/images/icon-${houseRandom}.svg`;
+        housePickImage.src = `/images/icon-${houseRandom}.svg`;
         housePickImage.alt = `${houseRandom}`
     }, 1500);
 

@@ -1,5 +1,5 @@
-# Rock, Paper, Scissors, Lizard and Spock Game with Vanilla JavaScript
-
+# Play Rock, Paper, Scissors, Lizard, Spock
+### :joystick: :fist: :hand: :v: :vulcan_salute: :lizard:	
 ## Table of contents
 
 - [Overview](#overview)
@@ -33,6 +33,7 @@
 ### Built With
 
 - HTML5
+- CSS3
 - Flexbox
 - SASS (SCSS)
 - JavaScript

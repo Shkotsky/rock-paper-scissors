@@ -21,6 +21,7 @@
 - View the optimal layout for the game depending on their device's screen size
 - Play Rock, Paper, Scissors, Lizard, Spock against the computer
 - Maintain the state of the score after refreshing the browser
+- Check the rules
 - Reset the score
 
 ### Links

@@ -1,4 +1,4 @@
-# Play Rock, Paper, Scissors, Lizard, Spock
+# Play Rock, Paper, Scissors, Spock, Lizard
 ### :joystick: :fist: :hand: :v: :vulcan_salute: :lizard:	
 ## Table of contents
 
